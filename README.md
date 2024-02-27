@@ -1,8 +1,7 @@
-# CuteOS Daemon
+# LingmoOS Daemon
 
-[![Build](https://github.com/Cute-OS/daemon/actions/workflows/build.yml/badge.svg)](https://github.com/Cute-OS/daemon/actions/workflows/build.yml)
 
-CuteOS backend
+LingmoOS backend
 
 ## Dependencies
 
