@@ -1,7 +1,7 @@
-Source: cute-daemon
+Source: lingmo-daemon
 Section: devel
 Priority: optional
-Maintainer: LingmoOS <cuteos@foxmail.com>
+Maintainer: LingmoOS <lingmoos@foxmail.com>
 Build-Depends: 
 		cmake,
 		libqapt-dev,
@@ -15,7 +15,7 @@ Standards-Version: 1.0.0.0
 Homepage: https://lingmo.org
 Rules-Requires-Root: no
 
-Package: cute-daemon
+Package: lingmo-daemon
 Architecture: any
 Depends: qml-module-qtquick-controls2,
          qml-module-qtquick2,

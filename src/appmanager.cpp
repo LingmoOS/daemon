@@ -12,7 +12,7 @@ AppManager::AppManager(QObject *parent)
     m_backend->init();
 
     QDBusConnection connection = QDBusConnection::systemBus();
-    if (!connection.registerService("com.cute.Daemon")) {
+    if (!connection.registerService("com.lingmo.Daemon")) {
         qDebug() << "Cannot register D-Bus service";
     }
 
@@ -73,9 +73,9 @@ void AppManager::notifyUninstalling(const QString &packageName)
                          QDBusConnection::sessionBus());
     if (iface.isValid()) {
         QList<QVariant> args;
-        args << "cute-daemon";
+        args << "lingmo-daemon";
         args << ((unsigned int) 0);
-        args << "cute-installer";
+        args << "lingmo-installer";
         args << packageName;
         args << tr("Uninstalling");
         args << QStringList();
@@ -93,7 +93,7 @@ void AppManager::notifyUninstallFailure(const QString &packageName)
                          QDBusConnection::sessionBus());
     if (iface.isValid()) {
         QList<QVariant> args;
-        args << "cute-daemon";
+        args << "lingmo-daemon";
         args << ((unsigned int) 0);
         args << "dialog-error";
         args << packageName;
@@ -113,7 +113,7 @@ void AppManager::notifyUninstallSuccess(const QString &packageName)
                          QDBusConnection::sessionBus());
     if (iface.isValid()) {
         QList<QVariant> args;
-        args << "cute-daemon";
+        args << "lingmo-daemon";
         args << ((unsigned int) 0);
         args << "process-completed-symbolic";
         args << packageName;

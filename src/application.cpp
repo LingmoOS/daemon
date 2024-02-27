@@ -10,13 +10,13 @@ Application::Application(int &argc, char **argv)
 
 int Application::run()
 {
-//    if (!QDBusConnection::systemBus().registerService("com.cute.Daemon")) {
+//    if (!QDBusConnection::systemBus().registerService("com.lingmo.Daemon")) {
 //        return 0;
 //    } else {
 //        m_appManager = new AppManager(this);
 //    }
 
-//    qDebug() << QDBusConnection::systemBus().registerService("com.cute.Daemon") << " registerService";
+//    qDebug() << QDBusConnection::systemBus().registerService("com.lingmo.Daemon") << " registerService";
     m_appManager = new AppManager(this);
     return QCoreApplication::exec();
 }

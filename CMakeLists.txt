@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(cute-daemon LANGUAGES CXX)
-set(TARGET cute-daemon)
+project(lingmo-daemon LANGUAGES CXX)
+set(TARGET lingmo-daemon)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -16,7 +16,7 @@ find_package(Qt5 COMPONENTS Core Widgets DBus REQUIRED)
 find_package(QApt REQUIRED)
 
 qt5_add_dbus_adaptor(DBUS_SOURCES
-                     src/com.cute.AppManager.xml
+                     src/com.lingmo.AppManager.xml
                      src/appmanager.h AppManager)
 
 set(PROJECT_SOURCES
@@ -27,12 +27,12 @@ set(PROJECT_SOURCES
 
 set_source_files_properties(${DBUS_SOURCES} PROPERTIES SKIP_AUTOGEN ON)
 
-add_executable(cute-daemon
+add_executable(lingmo-daemon
     ${PROJECT_SOURCES}
     ${DBUS_SOURCES}
 )
 
-target_link_libraries(cute-daemon PRIVATE
+target_link_libraries(lingmo-daemon PRIVATE
     Qt5::Widgets
     Qt5::Core
     Qt5::DBus
@@ -43,7 +43,7 @@ target_link_libraries(cute-daemon PRIVATE
 
 install(TARGETS ${TARGET} DESTINATION "/usr/bin/")
 
-install(FILES src/com.cute.Daemon.conf DESTINATION "/etc/dbus-1/system.d/")
-install(FILES src/com.cute.Daemon.service DESTINATION "/usr/share/dbus-1/system-services/")
-install(FILES src/cute-permission-surveillance DESTINATION "/usr/bin/")
-install(FILES src/cute-getfastmirror DESTINATION "/usr/bin/")
+install(FILES src/com.lingmo.Daemon.conf DESTINATION "/etc/dbus-1/system.d/")
+install(FILES src/com.lingmo.Daemon.service DESTINATION "/usr/share/dbus-1/system-services/")
+install(FILES src/lingmo-permission-surveillance DESTINATION "/usr/bin/")
+install(FILES src/lingmo-getfastmirror DESTINATION "/usr/bin/")

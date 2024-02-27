@@ -8,8 +8,8 @@ import pathlib
 
 def sendDbusMessage(text):
     bus = dbus.SessionBus()
-    lyrics = bus.get_object('com.cute.Statusbar', '/Statusbar/PermissionSurveillance')
-    iface = dbus.Interface(lyrics, dbus_interface='com.cute.Statusbar')
+    lyrics = bus.get_object('com.lingmo.Statusbar', '/Statusbar/PermissionSurveillance')
+    iface = dbus.Interface(lyrics, dbus_interface='com.lingmo.Statusbar')
     m = iface.get_dbus_method("sendCameraUser", dbus_interface=None)
     m(text)
 

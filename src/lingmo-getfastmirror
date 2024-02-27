@@ -4,9 +4,9 @@ VERSION="1.0.0"
 
 TEST_NETCONNECT_HOST="lingmo.org"
 
-SOURCES_MIRRORS_FILE="/etc/cute-apt/sources_mirrors.list"   
+SOURCES_MIRRORS_FILE="/etc/lingmo-apt/sources_mirrors.list"   
 
-MIRRORS_SPEED_FILE="/etc/cute-apt/mirrors_speed.list"
+MIRRORS_SPEED_FILE="/etc/lingmo-apt/mirrors_speed.list"
 
 SOURCES_MIRRORS_FILE_URL="http://packages.apt.lingmo.org/"
 
